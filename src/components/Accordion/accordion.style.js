@@ -15,7 +15,7 @@ export const Button = styled.div`
   width: 100%;
 `;
 
-export const ChevronAreaButton = styled.button`
+export const ChevronButton = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
@@ -30,7 +30,7 @@ export const ChevronAreaButton = styled.button`
 export const ChevronIcon = styled.img`
   transition: transform 0.3s ease-out;
   width: 12px;
-  ${(props) => props.isOpen && `
+  ${(props) => props.isAccordionOpen && `
     transform: rotate(180deg);
   `}
 `;
@@ -65,10 +65,27 @@ export const Header = styled.div`
   height: 100%;
 `;
 
+export const InfoButton = styled.button`
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  padding-top: 8px;
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const InfoIcon = styled.img`
+  height: 14px;
+  width: 14px;
+`;
+
 export const TooltipContainer = styled.div`
   display: none;
   position: absolute;
-  ${ChevronAreaButton}:hover + & {
+  ${ChevronButton}:hover + & {
     display: block;
   }
 `;

@@ -1,44 +1,56 @@
 import React, { useState } from 'react';
-// import { animated, useSpring } from 'react-spring';
 import PropTypes from 'prop-types';
 import { Heading } from 'components/Heading/heading';
+import { Modal } from 'components/Modal/modal';
 import { Tooltip } from 'components/Tooltip/tooltip';
-// import { Color } from 'styles/theme';
 import chevronIcon from 'assets/icons/arrow-down.svg';
 import dragIcon from 'assets/icons/drag-dots.svg';
+import infoIcon from 'assets/icons/info.svg';
 import * as S from './accordion.style';
 import * as C from './accordion.constants';
 
 export const Accordion = ({
-  title,
+  description,
   children,
+  title,
 }) => {
-  const [isOpen, setOpen] = useState(false);
+  const [isAccordionOpen, setAccordionOpen] = useState(false);
+  const [isModalDisplay, setModalDisplay] = useState(false);
 
   const onChangeCollapse = () => {
-    setOpen(!isOpen);
+    setAccordionOpen(!isAccordionOpen);
+  };
+
+  const onChangeInfo = () => {
+    setModalDisplay(true);
   };
 
   return (
-    <S.Container isOpen={isOpen}>
+    <S.Container isAccordionOpen={isAccordionOpen}>
       <S.Header>
         <S.Button>
           <S.Column>
-            <S.DragIcon src={dragIcon} alt="drag section" />
+            <S.DragIcon alt="drag section" src={dragIcon} />
             <Heading content={title} />
           </S.Column>
-          <S.ChevronAreaButton onClick={onChangeCollapse}>
-            <S.ChevronIcon isOpen={isOpen} src={chevronIcon} />
-          </S.ChevronAreaButton>
+          <S.InfoButton onClick={onChangeInfo}>
+            <S.InfoIcon alt="show description" src={infoIcon} />
+          </S.InfoButton>
+          <S.ChevronButton onClick={onChangeCollapse}>
+            <S.ChevronIcon alt="change collapse" isAccordionOpen={isAccordionOpen} src={chevronIcon} />
+          </S.ChevronButton>
           <S.TooltipContainer>
-            <Tooltip content={isOpen ? C.COLLAPSE_TEXT : C.EXPAND_TEXT} />
+            <Tooltip content={isAccordionOpen ? C.COLLAPSE_TEXT : C.EXPAND_TEXT} />
           </S.TooltipContainer>
         </S.Button>
       </S.Header>
-      {isOpen && (
+      {isAccordionOpen && (
         <S.Content>
           {children}
         </S.Content>
+      )}
+      {isModalDisplay && (
+        <Modal content={description} onCloseModal={() => setModalDisplay(false)} />
       )}
     </S.Container>
   );
@@ -46,5 +58,6 @@ export const Accordion = ({
 
 Accordion.propTypes = {
   children: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  description: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
