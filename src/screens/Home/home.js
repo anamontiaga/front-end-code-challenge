@@ -26,7 +26,10 @@ export const Home = () => (
       </Accordion>
       <Accordion description="Description 4" title="Tree cover loss">
         <S.Body>
-          Battle-No change of territory
+          {/* <Slider
+            max={100}
+            min={0}
+          /> */}
         </S.Body>
       </Accordion>
     </S.Legend>

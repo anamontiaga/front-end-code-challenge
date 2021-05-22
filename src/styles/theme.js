@@ -33,6 +33,7 @@ export const LineHeight = {
 
 export const Radius = {
   basic: '4px',
+  circle: '50%',
 };
 
 export const Shadow = {
