@@ -51,9 +51,10 @@ export const InfoIcon = styled.img`
 `;
 
 export const TooltipContainer = styled.div`
-  display: none;
-  position: absolute;
   bottom: 40px;
+  display: none;
+  left: 9px;
+  position: absolute;
   ${CollapseButton}:hover + & {
     display: inline-flex;
   }

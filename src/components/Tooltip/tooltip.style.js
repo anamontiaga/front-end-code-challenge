@@ -23,6 +23,7 @@ export const Content = styled.p`
   font-weight: ${FontWeight.normal};
   line-height: ${LineHeight.dialog};
   margin: 0;
+  white-space: nowrap;
 `;
 
 export const Indicator = styled.div`
@@ -32,7 +33,7 @@ export const Indicator = styled.div`
   border-right: transparent;
   box-shadow: ${Shadow.veryHighlighted};
   height: 18.55px;
-  left: 37.16px;
+  left: 40%;
   top: 35px;
   transform: rotate(-45deg);
   position: absolute;
