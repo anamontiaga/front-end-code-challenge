@@ -21,6 +21,16 @@ export const CollapseIcon = styled.img`
   `}
 `;
 
+export const CollapseTooltipContainer = styled.div`
+  bottom: 40px;
+  display: none;
+  left: 9px;
+  position: absolute;
+  ${CollapseButton}:hover + & {
+    display: inline-flex;
+  }
+`;
+
 export const Container = styled.div`
   background: ${Color.primary};
   box-sizing: border-box;
@@ -50,19 +60,14 @@ export const InfoIcon = styled.img`
   width: 14px;
 `;
 
-export const TooltipContainer = styled.div`
+export const InfoTooltipContainer = styled.div`
   bottom: 40px;
   display: none;
-  left: 9px;
+  left: -8px;
   position: absolute;
-  ${CollapseButton}:hover + & {
+  ${InfoButton}:hover + & {
     display: inline-flex;
   }
-`;
-
-export const VisibilityIcon = styled.img`
-  height: 14px;
-  width: 14px;
 `;
 
 export const VisibilityButton = styled.button`
@@ -74,5 +79,20 @@ export const VisibilityButton = styled.button`
   padding-top: 8px;
   &:focus {
     outline: none;
+  }
+`;
+
+export const VisibilityIcon = styled.img`
+  height: 14px;
+  width: 14px;
+`;
+
+export const VisibilityTooltipContainer = styled.div`
+  bottom: 40px;
+  display: none;
+  right: 20px;
+  position: absolute;
+  ${VisibilityButton}:hover + & {
+    display: inline-flex;
   }
 `;
