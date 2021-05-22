@@ -7,6 +7,7 @@ export const Card = styled.div`
   background-color: ${Color.primary};
   border: ${Border.basic};
   border-radius: ${Radius.basic};
+  height: auto;
   margin: auto;
   padding: 60px;
   position: relative;

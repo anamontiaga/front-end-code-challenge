@@ -28,8 +28,8 @@ export const Toolbar = ({
 );
 
 Toolbar.propTypes = {
-  isAccordionOpen: PropTypes.func.isRequired,
-  isLayerVisible: PropTypes.func.isRequired,
+  isAccordionOpen: PropTypes.bool.isRequired,
+  isLayerVisible: PropTypes.bool.isRequired,
   onChangeCollapse: PropTypes.func.isRequired,
   onChangeInfo: PropTypes.func.isRequired,
   onChangeVisibility: PropTypes.func.isRequired,

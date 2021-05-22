@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSpring } from 'react-spring';
 import PropTypes from 'prop-types';
 import { Heading } from 'components/Heading/heading';
 import { Modal } from 'components/Modal/modal';
@@ -11,6 +12,12 @@ export const Accordion = ({ description, children, title }) => {
   const [isModalDisplay, setModalDisplay] = useState(false);
   const [isLayerVisible, setLayerVisible] = useState(true);
   const handleVisibility = () => setLayerVisible(!isLayerVisible);
+
+  const openModalAnimation = useSpring({
+    opacity: isModalDisplay ? '1' : '0',
+    transform: isModalDisplay ? 'scale(1)' : 'scale(0)',
+    transition: '0.3s ease-out',
+  });
 
   return (
     <S.Container isAccordionOpen={isAccordionOpen}>
@@ -33,7 +40,11 @@ export const Accordion = ({ description, children, title }) => {
         </S.Content>
       )}
       {isModalDisplay && (
-        <Modal content={description} onCloseModal={() => setModalDisplay(false)} />
+        <Modal
+          content={description}
+          onCloseModal={() => setModalDisplay(false)}
+          openModalAnimation={openModalAnimation}
+        />
       )}
     </S.Container>
   );
