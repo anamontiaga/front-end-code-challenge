@@ -9,7 +9,7 @@ export const Body = styled.p`
   line-height: 15px;
 `;
 
-export const Legend = styled.div`
+export const Legend = styled.main`
   display: flex;
   flex-direction: column;
   position: absolute;

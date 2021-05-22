@@ -7,7 +7,7 @@ export const Column = styled.div`
   justify-content: left;
 `;
 
-export const Container = styled.div`
+export const Container = styled.section`
   background: ${Color.primary};
   border: ${Border.basic};
   box-sizing: border-box;
