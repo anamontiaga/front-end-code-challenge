@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Font } from 'styles/theme';
+import { Color, Font } from 'styles/theme';
 
 export const Body = styled.p`
   color: #6B6B6B;
@@ -7,4 +7,20 @@ export const Body = styled.p`
   font-size: 12px;
   font-weight: 400;
   line-height: 15px;
+`;
+
+export const Legend = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+`;
+
+export const View = styled.body`
+  align-items: center;
+  background: ${Color.background};
+  display: flex;  
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
 `;
