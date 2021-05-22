@@ -26,6 +26,13 @@ export const Home = () => {
     Timeline: 'timeline',
   };
 
+  const LEGEND_CONTENT = {
+    [Types.Basic]: 'Basic Content',
+    [Types.Choropleth]: 'Choropleth Content',
+    [Types.Gradient]: 'Gradient Content',
+    [Types.Timeline]: 'Timeline Content',
+  };
+
   return (
     <S.View>
       <S.Legend>
@@ -36,12 +43,8 @@ export const Home = () => {
             title={legendItem?.name}
           >
             <S.Body>
-              Battle-No change of territory
-              Battle-No change of territory Battle-No change of territory
-              Battle-No change of territory Battle-No change of territory
-              Battle-No change of territory Battle-No change of territory
-              Battle-No change of territory Battle-No change of territory
-          </S.Body>
+              {LEGEND_CONTENT[legendItem?.type]}
+            </S.Body>
           </Accordion>
         ))}
       </S.Legend>
