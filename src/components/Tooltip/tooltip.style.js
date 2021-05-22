@@ -1,34 +1,36 @@
 import styled from 'styled-components';
-import { Font } from 'styles/theme';
+import {
+  Border, Color, Font, FontSize, FontWeight, LineHeight, Radius, Shadow, Spacing,
+} from 'styles/theme';
 
 export const Container = styled.div`
-  background: #FFFFFF;
-  border: 1px solid rgba(26, 28, 34, 0.1); 
-  border-radius: 4px;
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+  background: ${Color.primary};
+  border: ${Border.basic}; 
+  border-radius: ${Radius.basic}; 
+  box-shadow: ${Shadow.veryHighlighted};
   box-sizing: border-box;
   display: inline-flex;
   flex-direction: column;
   height: auto;
-  padding: 12px 16px;
+  padding: calc(${Spacing.xs} + ${Spacing.xxs}) calc(${Spacing.xs} + ${Spacing.xs});
   position: relative;
 `;
 
 export const Content = styled.p`
-  color: #888888;
+  color: ${Color.dialog};
   font-family: ${Font.heading};
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
+  font-size: ${FontSize.big};
+  font-weight: ${FontWeight.normal};
+  line-height: ${LineHeight.dialog};
   margin: 0;
 `;
 
 export const Indicator = styled.div`
-  background: #FFFFFF;
-  border: 1px solid rgba(26, 28, 34, 0.1);
+  background: ${Color.primary};
+  border: ${Border.basic}; 
   border-top: transparent;
   border-right: transparent;
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1); 
+  box-shadow: ${Shadow.veryHighlighted};
   height: 18.55px;
   left: 37.16px;
   top: 35px;
