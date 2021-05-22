@@ -23,7 +23,11 @@ export const Home = () => {
     const LEGEND_CONTENT = {
       [C.Types.Basic]: <BasicLegend items={items} />,
       [C.Types.Choropleth]: <ChoroplethLegend items={items} />,
-      [C.Types.Gradient]: <GradientLegend items={items} />,
+      [C.Types.Gradient]: <GradientLegend
+        caption={C.GRADIENT_CHECK_CAPTION}
+        items={items}
+        text={C.GRADIENT_TEXT}
+      />,
       [C.Types.Timeline]: 'Timeline Content',
     };
     return LEGEND_CONTENT[type];

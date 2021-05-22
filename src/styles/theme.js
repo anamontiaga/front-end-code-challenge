@@ -7,6 +7,7 @@ export const Color = {
   body: '#606060',
   dialog: '#888888',
   heading: '#41484E',
+  link: '#1E9CFF',
   primary: '#FFFFFF',
 };
 
