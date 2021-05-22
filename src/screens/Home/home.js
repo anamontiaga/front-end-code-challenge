@@ -1,36 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { Accordion } from 'components/Accordion/accordion';
+import { BasicLegend } from 'components/BasicLegend/basicLegend';
+import * as C from './home.constants';
 import * as S from './home.style';
 
 export const Home = () => {
   const [legendData, setLegendData] = useState();
-  /* eslint-disable */
+
   const getData = () => {
     fetch('https://raw.githubusercontent.com/Vizzuality/front-end-code-challenge/master/data.json')
-      .then(response => response.json())
-      .then(data => setLegendData(data));
-  }
+      .then((response) => response.json())
+      .then((data) => setLegendData(data));
+  };
 
   useEffect(() => {
     getData();
   }, []);
 
-  if (!legendData) {
-    <div>Cargando...</div>
-  }
-
-  const Types = {
-    Basic: 'basic',
-    Choropleth: 'choropleth',
-    Gradient: 'gradient',
-    Timeline: 'timeline',
-  };
-
-  const LEGEND_CONTENT = {
-    [Types.Basic]: 'Basic Content',
-    [Types.Choropleth]: 'Choropleth Content',
-    [Types.Gradient]: 'Gradient Content',
-    [Types.Timeline]: 'Timeline Content',
+  const getLegendComponent = ({ type, items }) => {
+    const LEGEND_CONTENT = {
+      [C.Types.Basic]: <BasicLegend items={items} />,
+      [C.Types.Choropleth]: 'Choropleth Content',
+      [C.Types.Gradient]: 'Gradient Content',
+      [C.Types.Timeline]: 'Timeline Content',
+    };
+    return LEGEND_CONTENT[type];
   };
 
   return (
@@ -43,7 +37,7 @@ export const Home = () => {
             title={legendItem?.name}
           >
             <S.Body>
-              {LEGEND_CONTENT[legendItem?.type]}
+              {getLegendComponent({ type: legendItem.type, items: legendItem.items })}
             </S.Body>
           </Accordion>
         ))}

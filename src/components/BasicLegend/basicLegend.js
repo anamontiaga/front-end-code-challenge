@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import * as S from './basicLegend.style';
 
 export const BasicLegend = ({ items }) => (
-  <S.Container>
+  <S.Wrapper>
     {items.map((item) => (
-      <div>
-        <div color={item.color} />
-        <p>{item.name}</p>
-      </div>
+      <S.Legend>
+        <S.ColorContainer color={item.color} />
+        <S.Name>{item.name}</S.Name>
+      </S.Legend>
     ))}
-  </S.Container>
+  </S.Wrapper>
 );
 
 BasicLegend.propTypes = {

@@ -1,27 +1,35 @@
 import styled from 'styled-components';
 import {
-  Border, Color, Font, FontSize, FontWeight, LineHeight, Radius, Shadow, Spacing,
+  Color, Font, FontSize, FontWeight, LineHeight, Radius, Spacing,
 } from 'styles/theme';
 
-export const Container = styled.div`
-  background: ${Color.primary};
-  border: ${Border.basic}; 
-  border-radius: ${Radius.basic}; 
-  box-shadow: ${Shadow.veryHighlighted};
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: column;
-  height: auto;
-  padding: calc(${Spacing.xs} + ${Spacing.xxs}) calc(${Spacing.xs} + ${Spacing.xs});
-  position: relative;
+export const ColorContainer = styled.div`
+  background: ${(props) => props.color};
+  border-radius: ${Radius.circle};
+  height: 12px;
+  margin: 0 ${Spacing.xs} 0 0;
+  width: 12px;
 `;
 
-export const Content = styled.p`
+export const Legend = styled.div`
+  align-items: left;
+  display: flex;
+  height: 18px;
+  flex-direction: row;
+`;
+
+export const Name = styled.p`
   color: ${Color.dialog};
-  font-family: ${Font.heading};
-  font-size: ${FontSize.big};
+  font-family: ${Font.body};
+  font-size: ${FontSize.small};
   font-weight: ${FontWeight.normal};
-  line-height: ${LineHeight.dialog};
+  line-height: ${LineHeight.legend};
   margin: 0;
   white-space: nowrap;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 18px;
 `;

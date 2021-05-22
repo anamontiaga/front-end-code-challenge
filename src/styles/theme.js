@@ -27,8 +27,9 @@ export const FontWeight = {
 
 export const LineHeight = {
   body: '15px',
-  heading: '18px',
   dialog: '20px',
+  heading: '18px',
+  legend: '12px',
 };
 
 export const Radius = {
