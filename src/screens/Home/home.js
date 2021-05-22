@@ -1,37 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Accordion } from 'components/Accordion/accordion';
 import * as S from './home.style';
 
-export const Home = () => (
-  <S.View>
-    <S.Legend>
-      <Accordion description="Description 1" title="2017 African and Asian Conflict and Protest Events">
-        <S.Body>
-          Battle-No change of territory
-          Battle-No change of territory Battle-No change of territory
-          Battle-No change of territory Battle-No change of territory
-          Battle-No change of territory Battle-No change of territory
-          Battle-No change of territory Battle-No change of territory
-        </S.Body>
-      </Accordion>
-      <Accordion description="Description 2" title="2015 Accessibility to Cities">
-        <S.Body>
-          Battle-No change of territory
-        </S.Body>
-      </Accordion>
-      <Accordion description="Description 3" title="2017 African and Asian Conflict and Protest Events">
-        <S.Body>
-          Battle-No change of territory
-        </S.Body>
-      </Accordion>
-      <Accordion description="Description 4" title="Tree cover loss">
-        <S.Body>
-          {/* <Slider
-            max={100}
-            min={0}
-          /> */}
-        </S.Body>
-      </Accordion>
-    </S.Legend>
-  </S.View>
-);
+export const Home = () => {
+  const [legendData, setLegendData] = useState();
+  /* eslint-disable */
+  const getData = () => {
+    fetch('https://raw.githubusercontent.com/Vizzuality/front-end-code-challenge/master/data.json')
+      .then(response => response.json())
+      .then(data => setLegendData(data));
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  if (!legendData) {
+    <div>Cargando...</div>
+  }
+
+  const Types = {
+    Basic: 'basic',
+    Choropleth: 'choropleth',
+    Gradient: 'gradient',
+    Timeline: 'timeline',
+  };
+
+  return (
+    <S.View>
+      <S.Legend>
+        {legendData && legendData.map((legendItem) => (
+          <Accordion
+            description={legendItem?.description}
+            key={legendItem?.id}
+            title={legendItem?.name}
+          >
+            <S.Body>
+              Battle-No change of territory
+              Battle-No change of territory Battle-No change of territory
+              Battle-No change of territory Battle-No change of territory
+              Battle-No change of territory Battle-No change of territory
+              Battle-No change of territory Battle-No change of territory
+          </S.Body>
+          </Accordion>
+        ))}
+      </S.Legend>
+    </S.View>
+  );
+};

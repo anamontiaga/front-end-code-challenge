@@ -35,7 +35,7 @@ export const CloseIcon = styled.img`
 export const Info = styled.p`
   color: ${Color.body};
   font-family: ${Font.body};
-  line-height: ${LineHeight.body};
+  line-height: ${LineHeight.dialog};
 `;
 
 export const Wrapper = styled.div`
