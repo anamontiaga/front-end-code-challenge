@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as S from './gradientLegend.style';
+import * as S from './gradient.style';
 
-export const GradientLegend = ({ caption, items, text }) => {
+export const Gradient = ({ caption, items, text }) => {
   const gradientColors = items.map((item) => item.color).toString();
 
   return (
@@ -21,7 +21,7 @@ export const GradientLegend = ({ caption, items, text }) => {
   );
 };
 
-GradientLegend.propTypes = {
+Gradient.propTypes = {
   caption: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   text: PropTypes.string.isRequired,

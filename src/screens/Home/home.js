@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Accordion } from 'components/Accordion/accordion';
-import { BasicLegend } from 'components/BasicLegend/basicLegend';
-import { ChoroplethLegend } from 'components/ChoroplethLegend/choroplethLegend';
-import { GradientLegend } from 'components/GradientLegend/gradientLegend';
+import { Basic } from 'components/Basic/basic';
+import { Choropleth } from 'components/Choropleth/choropleth';
+import { Gradient } from 'components/Gradient/gradient';
 import { Timeline } from 'components/Timeline/timeline';
 import * as C from './home.constants';
 import * as S from './home.style';
@@ -22,9 +22,9 @@ export const Home = () => {
 
   const getLegendComponent = ({ type, items, timeline }) => {
     const LEGEND_CONTENT = {
-      [C.Types.Basic]: <BasicLegend items={items} />,
-      [C.Types.Choropleth]: <ChoroplethLegend items={items} />,
-      [C.Types.Gradient]: <GradientLegend
+      [C.Types.Basic]: <Basic items={items} />,
+      [C.Types.Choropleth]: <Choropleth items={items} />,
+      [C.Types.Gradient]: <Gradient
         caption={C.GRADIENT_CHECK_CAPTION}
         items={items}
         text={C.GRADIENT_TEXT}

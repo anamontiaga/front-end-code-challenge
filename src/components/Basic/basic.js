@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as S from './basicLegend.style';
+import * as S from './basic.style';
 
-export const BasicLegend = ({ items }) => (
+export const Basic = ({ items }) => (
   <S.Wrapper>
     {items.map((item) => (
       <S.Legend>
@@ -13,6 +13,6 @@ export const BasicLegend = ({ items }) => (
   </S.Wrapper>
 );
 
-BasicLegend.propTypes = {
+Basic.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };

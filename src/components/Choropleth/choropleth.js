@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as S from './choroplethLegend.style';
+import * as S from './choropleth.style';
 
-export const ChoroplethLegend = ({ items }) => {
+export const Choropleth = ({ items }) => {
   const removeWhiteSpaces = (string) => string.split(' ').join('');
   return (
     <S.Bar>
@@ -16,6 +16,6 @@ export const ChoroplethLegend = ({ items }) => {
   );
 };
 
-ChoroplethLegend.propTypes = {
+Choropleth.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
