@@ -3,6 +3,7 @@ import { Accordion } from 'components/Accordion/accordion';
 import { BasicLegend } from 'components/BasicLegend/basicLegend';
 import { ChoroplethLegend } from 'components/ChoroplethLegend/choroplethLegend';
 import { GradientLegend } from 'components/GradientLegend/gradientLegend';
+import { Timeline } from 'components/Timeline/timeline';
 import * as C from './home.constants';
 import * as S from './home.style';
 
@@ -19,7 +20,7 @@ export const Home = () => {
     getData();
   }, []);
 
-  const getLegendComponent = ({ type, items }) => {
+  const getLegendComponent = ({ type, items, timeline }) => {
     const LEGEND_CONTENT = {
       [C.Types.Basic]: <BasicLegend items={items} />,
       [C.Types.Choropleth]: <ChoroplethLegend items={items} />,
@@ -28,7 +29,7 @@ export const Home = () => {
         items={items}
         text={C.GRADIENT_TEXT}
       />,
-      [C.Types.Timeline]: 'Timeline Content',
+      [C.Types.Timeline]: <Timeline timeline={timeline} />,
     };
     return LEGEND_CONTENT[type];
   };
@@ -43,7 +44,11 @@ export const Home = () => {
             title={legendItem?.name}
           >
             <S.Body>
-              {getLegendComponent({ type: legendItem.type, items: legendItem.items })}
+              {getLegendComponent({
+                items: legendItem.items,
+                timeline: legendItem.timeline,
+                type: legendItem.type,
+              })}
             </S.Body>
           </Accordion>
         ))}
