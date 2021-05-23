@@ -11,6 +11,7 @@ export const Color = {
   primary: '#FFFFFF',
   slider: '#CAB2D6',
   neutral: {
+    iron: '#6B6B6B',
     silver: '#CCCCCC',
   },
 };

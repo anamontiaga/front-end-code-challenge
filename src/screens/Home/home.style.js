@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { Color, Font } from 'styles/theme';
+import { isTablet, isLaptop, isLargeDesktop } from 'styles/mediaqueries';
 
 export const Body = styled.p`
-  color: #6B6B6B;
+  color: ${Color.neutral.iron};
   font-family: ${Font.body};
   font-size: 12px;
   font-weight: 400;
@@ -24,4 +25,13 @@ export const View = styled.body`
   height: 100vh;
   justify-content: center;
   width: 100vw;
+  ${isTablet} {
+    background: red;
+  }
+  ${isLaptop} {
+    background: blue;
+  }
+  ${isLargeDesktop} {
+    background: pink;
+  }
 `;
