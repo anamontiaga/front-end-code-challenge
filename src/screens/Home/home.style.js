@@ -10,6 +10,11 @@ export const Body = styled.p`
   margin: 0 0 16px 0;
 `;
 
+export const DragContainer = styled.div`
+  height: auto;
+  width: 100%;
+`;
+
 export const Legend = styled.main`
   display: flex;
   flex-direction: column;

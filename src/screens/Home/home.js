@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { fetchData } from 'api/api';
 import { Accordion } from 'components/Accordion/accordion';
 import { Basic } from 'components/Basic/basic';
 import { Choropleth } from 'components/Choropleth/choropleth';
@@ -10,18 +11,12 @@ import * as S from './home.style';
 export const Home = () => {
   const [legendData, setLegendData] = useState();
   const [legendDates, setLegendDates] = useState({ startDate: null, endDate: null });
-  console.info('dates on HOME', legendDates);
   const [dragId, setDragId] = useState();
   const [accordionOpen, setIsAccordionOpen] = useState();
-
-  const getData = () => {
-    fetch('https://raw.githubusercontent.com/Vizzuality/front-end-code-challenge/master/data.json')
-      .then((response) => response.json())
-      .then((data) => setLegendData(data.map((obj, i) => ({ ...obj, order: i + 1 }))));
-  };
-
+  console.log(legendDates);
   useEffect(() => {
-    getData();
+    fetchData()
+      .then((data) => setLegendData(data.map((obj, i) => ({ ...obj, order: i + 1 }))));
   }, []);
 
   const handleDrag = (ev) => {
@@ -72,15 +67,11 @@ export const Home = () => {
         {legendData && legendData
           .sort((a, b) => a.order - b.order)
           .map((legendItem) => (
-            <div
+            <S.DragContainer
               id={legendItem.id}
               onDragOver={(ev) => !accordionOpen && ev.preventDefault()}
               onDragStart={handleDrag}
               onDrop={handleDrop}
-              style={{
-                width: '100%',
-                height: 'auto',
-              }}
             >
               <Accordion
                 description={legendItem?.description}
@@ -96,7 +87,7 @@ export const Home = () => {
                   })}
                 </S.Body>
               </Accordion>
-            </div>
+            </S.DragContainer>
           ))}
       </S.Legend>
     </S.View>
