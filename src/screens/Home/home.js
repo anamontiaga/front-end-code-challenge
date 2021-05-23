@@ -29,7 +29,10 @@ export const Home = () => {
         items={items}
         text={C.GRADIENT_TEXT}
       />,
-      [C.Types.Timeline]: <Timeline timeline={timeline} />,
+      [C.Types.Timeline]: <Timeline
+        timeline={timeline}
+        onChangeDate={(values) => console.log('VALUES ON HOME', values)}
+      />,
     };
     return LEGEND_CONTENT[type];
   };

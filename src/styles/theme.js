@@ -10,6 +10,9 @@ export const Color = {
   link: '#1E9CFF',
   primary: '#FFFFFF',
   slider: '#CAB2D6',
+  neutral: {
+    silver: '#CCCCCC',
+  },
 };
 
 export const Font = {

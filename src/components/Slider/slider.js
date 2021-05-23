@@ -1,75 +1,71 @@
 import React, { useState } from 'react';
 import { Range, getTrackBackground } from 'react-range';
 import PropTypes from 'prop-types';
+import { Color } from 'styles/theme';
 import * as S from './slider.style';
 
-export const Slider = ({ step }) => {
-  const MIN = 0;
-  const MAX = 20;
-  const [values, setValues] = useState([1, 20]);
+export const Slider = ({
+  maxDateFormat, minDateFormat, onChangeDate, step,
+}) => {
+  const MIN = parseInt(minDateFormat, 10);
+  const MAX = parseInt(maxDateFormat, 10);
+  const [values, setValues] = useState([2003, 2010]);
   return (
-    <S.Wrapper>
+    <>
       <Range
         values={values}
         step={step}
         min={MIN}
         max={MAX}
         onChange={(val) => {
-          console.log(val);
           setValues(val);
+          onChangeDate(val);
         }}
-        renderTrack={({ props, children, style }) => (
-          // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-          <div
-            onMouseDown={props.onMouseDown}
-            onTouchStart={props.onTouchStart}
-            style={{
-              ...style,
-              height: '10px',
-              display: 'flex',
-              width: '100%',
-            }}
+        renderTrack={({
+          props, children, style, onMouseDown, onTouchStart,
+        }) => (
+          <S.SliderWrapper
+            onMouseDown={onMouseDown}
+            onTouchStart={onTouchStart}
+            style={style}
           >
-            <div
+            <S.SliderBar
               ref={props.ref}
               style={{
-                height: '3px',
-                width: '100%',
                 background: getTrackBackground({
                   values,
-                  colors: ['#CCCCCC', '#CAB2D6', '#CCCCCC'],
+                  colors: [`${Color.neutral.silver}`, `${Color.slider}`, `${Color.neutral.silver}`],
                   min: MIN,
                   max: MAX,
                 }),
-                alignSelf: 'center',
               }}
             >
               {children}
-            </div>
-          </div>
+            </S.SliderBar>
+          </S.SliderWrapper>
         )}
         renderThumb={({ props }) => (
-          <div
+          <S.ThumbTouchArea
             {...props}
-            style={{
-              ...props.style,
-              alignItems: 'center',
-              backgroundColor: 'transparent',
-              height: '42px',
-              display: 'flex',
-              justifyContent: 'center',
-              width: '42px',
-            }}
+            style={props.style}
           >
             <S.Thumb />
-          </div>
+          </S.ThumbTouchArea>
         )}
       />
-    </S.Wrapper>
+      <S.ValuesWrapper>
+        {values.map((valueItem) => (
+          <S.ValueLegend>{valueItem}</S.ValueLegend>
+        ))}
+      </S.ValuesWrapper>
+    </>
   );
 };
 
 Slider.propTypes = {
+  maxDateFormat: PropTypes.number.isRequired,
+  minDateFormat: PropTypes.number.isRequired,
+  onChangeDate: PropTypes.func.isRequired,
   onMouseDown: PropTypes.func.isRequired,
   onTouchStart: PropTypes.func.isRequired,
   ref: PropTypes.shape({}).isRequired,
