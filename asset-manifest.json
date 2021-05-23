@@ -1,22 +1,28 @@
 {
   "files": {
     "main.css": "/front-end-kata/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/front-end-kata/static/js/main.529f9d65.chunk.js",
-    "main.js.map": "/front-end-kata/static/js/main.529f9d65.chunk.js.map",
+    "main.js": "/front-end-kata/static/js/main.f382f727.chunk.js",
+    "main.js.map": "/front-end-kata/static/js/main.f382f727.chunk.js.map",
     "runtime-main.js": "/front-end-kata/static/js/runtime-main.4e635870.js",
     "runtime-main.js.map": "/front-end-kata/static/js/runtime-main.4e635870.js.map",
-    "static/js/2.9c14613a.chunk.js": "/front-end-kata/static/js/2.9c14613a.chunk.js",
-    "static/js/2.9c14613a.chunk.js.map": "/front-end-kata/static/js/2.9c14613a.chunk.js.map",
+    "static/js/2.2d01a6db.chunk.js": "/front-end-kata/static/js/2.2d01a6db.chunk.js",
+    "static/js/2.2d01a6db.chunk.js.map": "/front-end-kata/static/js/2.2d01a6db.chunk.js.map",
     "index.html": "/front-end-kata/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/front-end-kata/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.9c14613a.chunk.js.LICENSE.txt": "/front-end-kata/static/js/2.9c14613a.chunk.js.LICENSE.txt",
+    "static/js/2.2d01a6db.chunk.js.LICENSE.txt": "/front-end-kata/static/js/2.2d01a6db.chunk.js.LICENSE.txt",
     "static/media/Lato-Regular.c8a1fd8e.woff": "/front-end-kata/static/media/Lato-Regular.c8a1fd8e.woff",
-    "static/media/OpenSans-Regular.dd7aff7c.woff": "/front-end-kata/static/media/OpenSans-Regular.dd7aff7c.woff"
+    "static/media/OpenSans-Regular.dd7aff7c.woff": "/front-end-kata/static/media/OpenSans-Regular.dd7aff7c.woff",
+    "static/media/arrow-down.f52426b7.svg": "/front-end-kata/static/media/arrow-down.f52426b7.svg",
+    "static/media/cross.153db873.svg": "/front-end-kata/static/media/cross.153db873.svg",
+    "static/media/drag-dots.cc4eb6cb.svg": "/front-end-kata/static/media/drag-dots.cc4eb6cb.svg",
+    "static/media/hide.92e63dee.svg": "/front-end-kata/static/media/hide.92e63dee.svg",
+    "static/media/info.c491fdbc.svg": "/front-end-kata/static/media/info.c491fdbc.svg",
+    "static/media/show.222b0076.svg": "/front-end-kata/static/media/show.222b0076.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4e635870.js",
-    "static/js/2.9c14613a.chunk.js",
+    "static/js/2.2d01a6db.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.529f9d65.chunk.js"
+    "static/js/main.f382f727.chunk.js"
   ]
 }
