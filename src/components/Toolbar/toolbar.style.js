@@ -28,7 +28,9 @@ export const CollapseTooltipContainer = styled.div`
   left: 10px;
   position: absolute;
   ${CollapseButton}:hover + & {
-    display: inline-flex;
+    ${isTablet} {
+      display: inline-flex;
+    }
   }
 `;
 
@@ -71,7 +73,9 @@ export const InfoTooltipContainer = styled.div`
   left: -8px;
   position: absolute;
   ${InfoButton}:hover + & {
-    display: inline-flex;
+    ${isTablet} {
+      display: inline-flex;
+    }
   }
 `;
 
@@ -98,6 +102,8 @@ export const VisibilityTooltipContainer = styled.div`
   right: 20px;
   position: absolute;
   ${VisibilityButton}:hover + & {
-    display: inline-flex;
+    ${isTablet} {
+      display: inline-flex;
+    }
   }
 `;
