@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { isTablet } from 'styles/mediaqueries';
 import {
   Color, Font, FontSize, FontWeight, LineHeight,
 } from 'styles/theme';
-import { isTablet } from 'styles/mediaqueries';
 
 export const Bar = styled.div`
   display: flex;

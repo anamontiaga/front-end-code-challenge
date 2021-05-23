@@ -21,7 +21,7 @@ export const View = styled.body`
   align-items: center;
   background: ${Color.background};
   display: flex;  
-  height: 100vh;
+  height: 900px;
   justify-content: center;
   width: 100vw;
 `;

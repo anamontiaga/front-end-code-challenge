@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { isTablet } from 'styles/mediaqueries';
 import {
   Color, Font, FontSize, FontWeight, LineHeight,
 } from 'styles/theme';
-import { isTablet } from 'styles/mediaqueries';
 
 export const Content = styled.h1`
   color: ${Color.heading};

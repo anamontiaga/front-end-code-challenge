@@ -15,7 +15,7 @@ export const Toolbar = ({
     <S.VisibilityButton onClick={onChangeVisibility}>
       <S.VisibilityIcon alt="changeVisibility" src={isLayerVisible ? hideIcon : showIcon} />
     </S.VisibilityButton>
-    <S.VisibilityTooltipContainer>
+    <S.VisibilityTooltipContainer isLayerVisible={isLayerVisible}>
       <Tooltip content={isLayerVisible ? C.HIDE_TEXT : C.SHOW_TEXT} />
     </S.VisibilityTooltipContainer>
     <S.InfoButton onClick={onChangeInfo}>
@@ -27,7 +27,7 @@ export const Toolbar = ({
     <S.CollapseButton onClick={onChangeCollapse}>
       <S.CollapseIcon alt="change collapse" isAccordionOpen={isAccordionOpen} src={collapseIcon} />
     </S.CollapseButton>
-    <S.CollapseTooltipContainer>
+    <S.CollapseTooltipContainer isAccordionOpen={isAccordionOpen}>
       <Tooltip content={isAccordionOpen ? C.COLLAPSE_TEXT : C.EXPAND_TEXT} />
     </S.CollapseTooltipContainer>
   </S.Wrapper>

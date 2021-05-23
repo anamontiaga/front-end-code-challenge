@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { isTablet } from 'styles/mediaqueries';
 import {
   Border, Color, Font, LineHeight, Radius, Spacing,
 } from 'styles/theme';
@@ -7,12 +8,16 @@ export const Card = styled.div`
   background-color: ${Color.primary};
   border: ${Border.basic};
   border-radius: ${Radius.basic};
-  max-height: 600px;
+  max-height: 400px;
   margin: auto;
   overflow: auto;
-  padding: 60px;
+  padding: 40px 20px;
   position: relative;
-  width: 40%;
+  width: 80%;
+  ${isTablet} {
+    padding: 60px;
+    width: 40%;
+  }
 `;
 
 export const CloseButton = styled.button`

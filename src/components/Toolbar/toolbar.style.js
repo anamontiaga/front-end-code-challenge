@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Color } from 'styles/theme';
 import { isTablet } from 'styles/mediaqueries';
+import { Color } from 'styles/theme';
 
 export const CollapseButton = styled.button`
   background: transparent;
@@ -29,6 +29,12 @@ export const CollapseTooltipContainer = styled.div`
   position: absolute;
   ${CollapseButton}:hover + & {
     display: inline-flex;
+  }
+  ${(props) => props.isAccordionOpen && `
+    display: inline-flex;
+  `}
+  ${isTablet} {
+    display: none;
   }
 `;
 
