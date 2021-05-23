@@ -25,7 +25,7 @@ export const CollapseIcon = styled.img`
 export const CollapseTooltipContainer = styled.div`
   bottom: 40px;
   display: none;
-  left: 9px;
+  left: 10px;
   position: absolute;
   ${CollapseButton}:hover + & {
     display: inline-flex;
@@ -45,11 +45,12 @@ export const Wrapper = styled.div`
   flex-direction: row;
   height: auto;
   justify-content: space-between;
-  margin-left: 30px;
+  margin-left: 10px;
   position: relative;
-  width: 80px;
+  width: 70px;
   ${isTablet} {
     margin-left: 63px;
+    width: 80px;
   }
 `;
 
@@ -78,6 +79,12 @@ export const InfoTooltipContainer = styled.div`
   ${InfoButton}:hover + & {
     display: inline-flex;
   }
+  ${(props) => props.isModalDisplay && `
+    display: inline-flex;
+  `}
+  ${isTablet} {
+    display: none;
+  }
 `;
 
 export const VisibilityButton = styled.button`
@@ -104,5 +111,11 @@ export const VisibilityTooltipContainer = styled.div`
   position: absolute;
   ${VisibilityButton}:hover + & {
     display: inline-flex;
+  }
+  ${(props) => !props.isLayerVisible && `
+    display: inline-flex;
+  `}
+  ${isTablet} {
+    display: none;
   }
 `;

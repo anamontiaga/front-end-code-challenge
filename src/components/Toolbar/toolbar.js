@@ -9,7 +9,12 @@ import * as C from './toolbar.constants';
 import * as S from './toolbar.style';
 
 export const Toolbar = ({
-  isAccordionOpen, isLayerVisible, onChangeCollapse, onChangeInfo, onChangeVisibility,
+  isAccordionOpen,
+  isLayerVisible,
+  isModalDisplay,
+  onChangeCollapse,
+  onChangeInfo,
+  onChangeVisibility,
 }) => (
   <S.Wrapper>
     <S.VisibilityButton onClick={onChangeVisibility}>
@@ -21,7 +26,7 @@ export const Toolbar = ({
     <S.InfoButton onClick={onChangeInfo}>
       <S.InfoIcon alt="show description" src={infoIcon} />
     </S.InfoButton>
-    <S.InfoTooltipContainer>
+    <S.InfoTooltipContainer isModalDisplay={isModalDisplay}>
       <Tooltip content={C.INFO_TEXT} />
     </S.InfoTooltipContainer>
     <S.CollapseButton onClick={onChangeCollapse}>
@@ -36,6 +41,7 @@ export const Toolbar = ({
 Toolbar.propTypes = {
   isAccordionOpen: PropTypes.bool.isRequired,
   isLayerVisible: PropTypes.bool.isRequired,
+  isModalDisplay: PropTypes.bool.isRequired,
   onChangeCollapse: PropTypes.func.isRequired,
   onChangeInfo: PropTypes.func.isRequired,
   onChangeVisibility: PropTypes.func.isRequired,
