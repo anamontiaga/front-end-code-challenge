@@ -29,7 +29,9 @@ export const Accordion = ({ description, children, title }) => {
     <S.Container isAccordionOpen={isAccordionOpen}>
       <S.Header>
         <S.Column>
-          <S.DragIcon alt="drag section" src={dragIcon} />
+          <S.DragButton>
+            <S.DragIcon alt="drag section" src={dragIcon} />
+          </S.DragButton>
           <Heading content={title} />
         </S.Column>
         <Toolbar

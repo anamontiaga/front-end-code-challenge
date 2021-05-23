@@ -20,6 +20,15 @@ export const Content = styled.div`
   padding: 0 ${Spacing.s} ${Spacing.s} ${Spacing.s};
 `;
 
+export const DragButton = styled.button`
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+`;
+
 export const DragIcon = styled.img`
   height: 18px;
   margin-right: 10px;
