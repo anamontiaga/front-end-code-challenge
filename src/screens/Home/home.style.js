@@ -7,6 +7,7 @@ export const Body = styled.p`
   font-size: 12px;
   font-weight: 400;
   line-height: 15px;
+  margin: 0 0 16px 0;
 `;
 
 export const Legend = styled.main`

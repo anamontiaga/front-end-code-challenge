@@ -17,7 +17,8 @@ export const Container = styled.section`
 
 export const Content = styled.div`
   background: ${Color.primary};
-  padding: 0 ${Spacing.s} ${Spacing.s} ${Spacing.s};
+  border: 1px solid transparent;
+  padding: 0 ${Spacing.s};
 `;
 
 export const DragButton = styled.button`

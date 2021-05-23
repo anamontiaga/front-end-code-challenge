@@ -9,6 +9,8 @@ import * as S from './home.style';
 
 export const Home = () => {
   const [legendData, setLegendData] = useState();
+  const [legendDates, setLegendDates] = useState({ startDate: null, endDate: null });
+  console.log({ legendDates });
 
   const getData = () => {
     fetch('https://raw.githubusercontent.com/Vizzuality/front-end-code-challenge/master/data.json')
@@ -31,7 +33,7 @@ export const Home = () => {
       />,
       [C.Types.Timeline]: <Timeline
         timeline={timeline}
-        onChangeDate={(values) => console.log('VALUES ON HOME', values)}
+        onChangeDate={(values) => setLegendDates({ startDate: values[0], endDate: values[1] })}
       />,
     };
     return LEGEND_CONTENT[type];
