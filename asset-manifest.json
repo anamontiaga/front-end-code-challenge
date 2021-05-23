@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/front-end-kata/static/css/main.677e0740.chunk.css",
-    "main.js": "/front-end-kata/static/js/main.5bdb64f3.chunk.js",
-    "main.js.map": "/front-end-kata/static/js/main.5bdb64f3.chunk.js.map",
+    "main.js": "/front-end-kata/static/js/main.eec1c232.chunk.js",
+    "main.js.map": "/front-end-kata/static/js/main.eec1c232.chunk.js.map",
     "runtime-main.js": "/front-end-kata/static/js/runtime-main.4e635870.js",
     "runtime-main.js.map": "/front-end-kata/static/js/runtime-main.4e635870.js.map",
     "static/js/2.26d97e40.chunk.js": "/front-end-kata/static/js/2.26d97e40.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.4e635870.js",
     "static/js/2.26d97e40.chunk.js",
     "static/css/main.677e0740.chunk.css",
-    "static/js/main.5bdb64f3.chunk.js"
+    "static/js/main.eec1c232.chunk.js"
   ]
 }
