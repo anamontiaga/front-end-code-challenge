@@ -8,7 +8,7 @@ import dragIcon from 'assets/icons/drag-dots.svg';
 import * as S from './accordion.style';
 
 export const Accordion = ({
-  children, description, title,
+  children, description, onChangeAccordion, title,
 }) => {
   const [isAccordionOpen, setAccordionOpen] = useState(false);
   const [isModalDisplay, setModalDisplay] = useState(false);
@@ -28,7 +28,10 @@ export const Accordion = ({
   });
 
   return (
-    <S.Container isAccordionOpen={isAccordionOpen}>
+    <S.Container
+      isAccordionOpen={isAccordionOpen}
+      onChange={onChangeAccordion(isAccordionOpen)}
+    >
       <S.Header>
         <S.Column>
           <S.DragButton>
@@ -65,5 +68,6 @@ export const Accordion = ({
 Accordion.propTypes = {
   children: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   description: PropTypes.string.isRequired,
+  onChangeAccordion: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
 };

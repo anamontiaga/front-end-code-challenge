@@ -12,6 +12,7 @@ export const Home = () => {
   const [legendDates, setLegendDates] = useState({ startDate: null, endDate: null });
   console.info('dates on HOME', legendDates);
   const [dragId, setDragId] = useState();
+  const [accordionOpen, setIsAccordionOpen] = useState();
 
   const getData = () => {
     fetch('https://raw.githubusercontent.com/Vizzuality/front-end-code-challenge/master/data.json')
@@ -72,9 +73,8 @@ export const Home = () => {
           .sort((a, b) => a.order - b.order)
           .map((legendItem) => (
             <div
-              draggable
               id={legendItem.id}
-              onDragOver={(ev) => ev.preventDefault()}
+              onDragOver={(ev) => !accordionOpen && ev.preventDefault()}
               onDragStart={handleDrag}
               onDrop={handleDrop}
               style={{
@@ -86,6 +86,7 @@ export const Home = () => {
                 description={legendItem?.description}
                 key={legendItem?.id}
                 title={legendItem?.name}
+                onChangeAccordion={(isAccordionOpen) => setIsAccordionOpen(isAccordionOpen)}
               >
                 <S.Body>
                   {getLegendComponent({
