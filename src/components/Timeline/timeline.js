@@ -6,20 +6,15 @@ import * as S from './timeline.style';
 
 export const Timeline = ({ timeline }) => {
   const {
-    dateFormat, maxDate, minDate, speed, step,
+    dateFormat, maxDate, minDate, step, /* speed, */
   } = timeline;
   const dateFormatLowercase = dateFormat.toLowerCase();
   const maxDateFormat = format(new Date(maxDate), dateFormatLowercase);
   const minDateFormat = format(new Date(minDate), dateFormatLowercase);
-
+  console.log({ maxDateFormat, minDateFormat });
   return (
     <S.Wrapper>
-      <Slider
-        maxDate={maxDateFormat}
-        minDate={minDateFormat}
-        speed={speed}
-        step={step}
-      />
+      <Slider step={step} />
     </S.Wrapper>
   );
 };

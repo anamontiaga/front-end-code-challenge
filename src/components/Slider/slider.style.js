@@ -1,8 +1,13 @@
 import styled from 'styled-components';
+import { Color, Radius } from 'styles/theme';
 
 export const Wrapper = styled.div`
   position: relative;
-  width: 200px;
-  text-align: center;
-  margin-bottom: 50px;
+`;
+
+export const Thumb = styled.div`
+  background: ${Color.slider};
+  border-radius: ${Radius.circle};
+  height: 12px;
+  width: 12px;
 `;

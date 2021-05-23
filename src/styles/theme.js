@@ -9,6 +9,7 @@ export const Color = {
   heading: '#41484E',
   link: '#1E9CFF',
   primary: '#FFFFFF',
+  slider: '#CAB2D6',
 };
 
 export const Font = {
