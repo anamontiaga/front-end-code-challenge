@@ -28,7 +28,7 @@ export const Content = styled.div`
 export const DragButton = styled.button`
   background: transparent;
   border: none;
-  cursor: pointer;
+  cursor: move;
   &:focus {
     outline: none;
   }

@@ -7,7 +7,9 @@ import { Toolbar } from 'components/Toolbar/toolbar';
 import dragIcon from 'assets/icons/drag-dots.svg';
 import * as S from './accordion.style';
 
-export const Accordion = ({ description, children, title }) => {
+export const Accordion = ({
+  children, description, title,
+}) => {
   const [isAccordionOpen, setAccordionOpen] = useState(false);
   const [isModalDisplay, setModalDisplay] = useState(false);
   const [isLayerVisible, setLayerVisible] = useState(true);
