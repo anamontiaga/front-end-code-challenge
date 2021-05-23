@@ -30,12 +30,6 @@ export const CollapseTooltipContainer = styled.div`
   ${CollapseButton}:hover + & {
     display: inline-flex;
   }
-  ${(props) => props.isAccordionOpen && `
-    display: inline-flex;
-  `}
-  ${isTablet} {
-    display: none;
-  }
 `;
 
 export const Wrapper = styled.div`
@@ -79,12 +73,6 @@ export const InfoTooltipContainer = styled.div`
   ${InfoButton}:hover + & {
     display: inline-flex;
   }
-  ${(props) => props.isModalDisplay && `
-    display: inline-flex;
-  `}
-  ${isTablet} {
-    display: none;
-  }
 `;
 
 export const VisibilityButton = styled.button`
@@ -111,11 +99,5 @@ export const VisibilityTooltipContainer = styled.div`
   position: absolute;
   ${VisibilityButton}:hover + & {
     display: inline-flex;
-  }
-  ${(props) => !props.isLayerVisible && `
-    display: inline-flex;
-  `}
-  ${isTablet} {
-    display: none;
   }
 `;

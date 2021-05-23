@@ -37,7 +37,6 @@ export const Accordion = ({ description, children, title }) => {
         <Toolbar
           isAccordionOpen={isAccordionOpen}
           isLayerVisible={isLayerVisible}
-          isModalDisplay={isModalDisplay}
           onChangeCollapse={() => setAccordionOpen(!isAccordionOpen)}
           onChangeInfo={() => setModalDisplay(true)}
           onChangeVisibility={handleVisibility}
