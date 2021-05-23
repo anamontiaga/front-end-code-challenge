@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {
   Color, Font, FontSize, FontWeight, LineHeight,
 } from 'styles/theme';
+import { isTablet } from 'styles/mediaqueries';
 
 export const Bar = styled.div`
   display: flex;
@@ -12,7 +13,10 @@ export const ColorContainer = styled.div`
   background: ${(props) => props.color};
   box-sizing: border-box;
   height: 7px;
-  width: 54px;
+  width: 31px;
+  ${isTablet} {
+    width: 54px;
+  }
 `;
 
 export const Legend = styled.div`

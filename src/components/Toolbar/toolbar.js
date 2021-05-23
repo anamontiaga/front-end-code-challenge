@@ -11,7 +11,7 @@ import * as S from './toolbar.style';
 export const Toolbar = ({
   isAccordionOpen, isLayerVisible, onChangeCollapse, onChangeInfo, onChangeVisibility,
 }) => (
-  <S.Container>
+  <S.Wrapper>
     <S.VisibilityButton onClick={onChangeVisibility}>
       <S.VisibilityIcon alt="changeVisibility" src={isLayerVisible ? hideIcon : showIcon} />
     </S.VisibilityButton>
@@ -30,7 +30,7 @@ export const Toolbar = ({
     <S.CollapseTooltipContainer>
       <Tooltip content={isAccordionOpen ? C.COLLAPSE_TEXT : C.EXPAND_TEXT} />
     </S.CollapseTooltipContainer>
-  </S.Container>
+  </S.Wrapper>
 );
 
 Toolbar.propTypes = {

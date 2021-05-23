@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Color } from 'styles/theme';
+import { isTablet } from 'styles/mediaqueries';
 
 export const CollapseButton = styled.button`
   background: transparent;
@@ -31,16 +32,19 @@ export const CollapseTooltipContainer = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
   background: ${Color.primary};
   box-sizing: border-box;
   display: inline-flex;
   flex-direction: row;
   height: auto;
   justify-content: space-between;
-  margin-left: 40px;
+  margin-left: 30px;
   position: relative;
   width: 80px;
+  ${isTablet} {
+    margin-left: 63px;
+  }
 `;
 
 export const InfoButton = styled.button`

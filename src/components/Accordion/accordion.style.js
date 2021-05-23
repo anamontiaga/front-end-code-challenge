@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Color, Border, Spacing } from 'styles/theme';
+import { isTablet } from 'styles/mediaqueries';
 
 export const Column = styled.div`
   display: flex;
@@ -11,8 +12,11 @@ export const Container = styled.section`
   background: ${Color.primary};
   border: ${Border.basic};
   box-sizing: border-box;
-  max-width: 520px;
+  max-width: 320px;
   position: relative;
+${isTablet} {
+max-width: 520px;
+}
 `;
 
 export const Content = styled.div`
