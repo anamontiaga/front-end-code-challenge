@@ -6,7 +6,7 @@ import * as S from './timeline.style';
 
 export const Timeline = ({ onChangeDate, timeline }) => {
   const {
-    dateFormat, maxDate, minDate, step, /* speed, */
+    dateFormat, maxDate, minDate, step,
   } = timeline;
   const dateFormatLowercase = dateFormat.toLowerCase();
   const maxDateFormat = format(new Date(maxDate), dateFormatLowercase);
