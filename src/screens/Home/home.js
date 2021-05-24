@@ -80,7 +80,7 @@ export const Home = () => {
                 title={legendItem?.name}
                 onChangeAccordion={(isAccordionOpen) => setIsAccordionOpen(isAccordionOpen)}
               >
-                <S.Body>
+                <S.Body data-cy="accordion-content">
                   {getLegendComponent({
                     items: legendItem.items,
                     timeline: legendItem.timeline,

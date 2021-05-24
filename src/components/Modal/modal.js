@@ -12,7 +12,7 @@ export const Modal = ({
   <S.Wrapper>
     <animated.div style={openModalAnimation}>
       <S.Card>
-        <S.CloseButton onClick={onCloseModal}>
+        <S.CloseButton data-cy="close-modal-btn" onClick={onCloseModal}>
           <S.CloseIcon alt="close modal" src={closeIcon} />
         </S.CloseButton>
         <S.Info dangerouslySetInnerHTML={{ __html: content }} />

@@ -9,18 +9,18 @@ export const Slider = ({
 }) => {
   const MIN = parseInt(minDateFormat, 10);
   const MAX = parseInt(maxDateFormat, 10);
-  const [values, setValues] = useState([2003, 2010]);
+  const [values, setValues] = useState([2004, 2014]);
   return (
     <>
       <Range
-        values={values}
-        step={step}
         min={MIN}
         max={MAX}
         onChange={(val) => {
           setValues(val);
           onChangeDate(val);
         }}
+        step={step}
+        values={values}
         renderTrack={({
           props, children, style, onMouseDown, onTouchStart,
         }) => (
@@ -47,6 +47,7 @@ export const Slider = ({
         renderThumb={({ props }) => (
           <S.ThumbTouchArea
             {...props}
+            data-cy="thumb-touch-area"
             style={props.style}
           >
             <S.Thumb />
