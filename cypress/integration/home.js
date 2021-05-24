@@ -12,12 +12,9 @@ describe('First test', () => {
     cy.get('[data-cy=close-modal-btn]').click()
     cy.wait(2000)
     cy.get('[data-cy=visibility-btn]').eq(2).click()
-    cy.wait(2000)
+    cy.wait(4000)
     cy.get('[data-cy=collapse-btn]').eq(2).click()
-    cy.wait(2000)
-    cy.get('[data-cy=accordion-content]').click({ display: 'none' })
-    cy.wait(2000)
-
+    cy.wait(4000)
   });
 });
 

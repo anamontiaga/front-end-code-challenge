@@ -69,6 +69,7 @@ export const Home = () => {
           .sort((a, b) => a.order - b.order)
           .map((legendItem) => (
             <S.DragContainer
+              data-cy="drag-container"
               id={legendItem.id}
               onDragOver={(ev) => !accordionOpen && ev.preventDefault()}
               onDragStart={handleDrag}
