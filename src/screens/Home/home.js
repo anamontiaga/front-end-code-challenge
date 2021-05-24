@@ -10,10 +10,11 @@ import * as S from './home.style';
 
 export const Home = () => {
   const [legendData, setLegendData] = useState();
+  // eslint-disable-next-line no-unused-vars
   const [legendDates, setLegendDates] = useState({ startDate: null, endDate: null });
   const [dragId, setDragId] = useState();
   const [accordionOpen, setIsAccordionOpen] = useState();
-  console.log(legendDates);
+
   useEffect(() => {
     fetchData()
       .then((data) => setLegendData(data.map((obj, i) => ({ ...obj, order: i + 1 }))));
