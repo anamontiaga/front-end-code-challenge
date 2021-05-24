@@ -17,12 +17,12 @@
 ## Libraries/Tools used
 
 * Airbnb + Prettier + React Eslint configurations
-* Layouting with [Styled-components](https://styled-components.com)
-* Uses [Cypress](https://www.cypress.io) for end2end testing
-* Uses [React-testing-library](https://testing-library.com) for component testing
+* Layouting with [styled-components](https://styled-components.com)
+* Uses [sypress](https://www.cypress.io) for end2end testing
+* Uses [react-testing-library](https://testing-library.com) for component testing
 * Formating dates with [date-fns](https://date-fns.org)
 * Basic router with [react-router-dom](https://reactrouter.com)
-* Animation with [React-spring](https://react-spring.io)
+* Animation with [react-spring](https://react-spring.io)
 * Double slider with [react-range](https://github.com/tajo/react-range)
 * Deploy with gitHub Pages
 * Validate data with PropTypes
