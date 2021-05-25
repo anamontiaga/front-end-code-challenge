@@ -17,6 +17,7 @@ End-to-end test has been applied to test the route that a user would take in the
 ## Demo 
 
 The project can be seen in the following url hosted on GitHub Page:
+
 https://anamontiaga.github.io/front-end-code-challenge
 
 ## Libraries/Tools used
@@ -49,5 +50,68 @@ https://anamontiaga.github.io/front-end-code-challenge
 ## Mobile devices
 https://user-images.githubusercontent.com/51995866/119395145-65faf900-bcd3-11eb-9b39-196c43134b67.mov
 
-
+## Structure
+src
+ ┣ api
+ ┃ ┗ api.js
+ ┣ assets
+ ┃ ┗ icons
+ ┃ ┃ ┣ arrow-down.svg
+ ┃ ┃ ┣ cross.svg
+ ┃ ┃ ┣ drag-dots.svg
+ ┃ ┃ ┣ hide.svg
+ ┃ ┃ ┣ info.svg
+ ┃ ┃ ┗ show.svg
+ ┣ components
+ ┃ ┣ Accordion
+ ┃ ┃ ┣ accordion.js
+ ┃ ┃ ┗ accordion.style.js
+ ┃ ┣ Basic
+ ┃ ┃ ┣ basic.js
+ ┃ ┃ ┗ basic.style.js
+ ┃ ┣ Choropleth
+ ┃ ┃ ┣ choropleth.js
+ ┃ ┃ ┣ choropleth.style.js
+ ┃ ┃ ┗ choropleth.test.js
+ ┃ ┣ Gradient
+ ┃ ┃ ┣ gradient.js
+ ┃ ┃ ┗ gradient.style.js
+ ┃ ┣ Heading
+ ┃ ┃ ┣ heading.js
+ ┃ ┃ ┗ heading.style.js
+ ┃ ┣ Modal
+ ┃ ┃ ┣ modal.js
+ ┃ ┃ ┗ modal.style.js
+ ┃ ┣ Slider
+ ┃ ┃ ┣ slider.js
+ ┃ ┃ ┗ slider.style.js
+ ┃ ┣ Timeline
+ ┃ ┃ ┣ timeline.js
+ ┃ ┃ ┗ timeline.style.js
+ ┃ ┣ Toolbar
+ ┃ ┃ ┣ toolbar.constants.js
+ ┃ ┃ ┣ toolbar.js
+ ┃ ┃ ┣ toolbar.style.js
+ ┃ ┃ ┗ toolbar.test.js
+ ┃ ┗ Tooltip
+ ┃ ┃ ┣ tooltip.js
+ ┃ ┃ ┗ tooltip.style.js
+ ┣ config
+ ┃ ┗ router
+ ┃ ┃ ┗ paths.js
+ ┣ fonts
+ ┃ ┣ Lato-Regular.woff
+ ┃ ┗ OpenSans-Regular.woff
+ ┣ screens
+ ┃ ┗ Home
+ ┃ ┃ ┣ home.constants.js
+ ┃ ┃ ┣ home.js
+ ┃ ┃ ┗ home.style.js
+ ┣ styles
+ ┃ ┣ global.js
+ ┃ ┣ mediaqueries.js
+ ┃ ┗ theme.js
+ ┣ App.js
+ ┣ index.css
+ ┣ index.js
 
