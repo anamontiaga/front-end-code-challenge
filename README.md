@@ -11,7 +11,8 @@
 * To run component tests run `yarn test` on the project root.
 * To run end2end tests run `yarn run cypress open` on the project root. Ensured that the baseUrl configured in the **`cypress.json`** matches the url of your local
 
-**Note** End-to-end test has been applied to test the route that a user would take in the total of the home screen. Component tests have been applied to the Choropleth and Toolbar components.
+**Note** 
+End-to-end test has been applied to test the route that a user would take in the total of the home screen. Component tests have been applied to the Choropleth and Toolbar components.
 
 ## Demo 
 
