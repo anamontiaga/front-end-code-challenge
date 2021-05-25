@@ -51,67 +51,67 @@ https://anamontiaga.github.io/front-end-code-challenge
 https://user-images.githubusercontent.com/51995866/119395145-65faf900-bcd3-11eb-9b39-196c43134b67.mov
 
 ## Structure
-src
- ┣ 📂api
- ┃ ┗ 📜api.js
- ┣ 📂assets
- ┃ ┗ 📂icons
- ┃ ┃ ┣ 📜arrow-down.svg
- ┃ ┃ ┣ 📜cross.svg
- ┃ ┃ ┣ 📜drag-dots.svg
- ┃ ┃ ┣ 📜hide.svg
- ┃ ┃ ┣ 📜info.svg
- ┃ ┃ ┗ 📜show.svg
- ┣ 📂components
- ┃ ┣ 📂Accordion
- ┃ ┃ ┣ 📜accordion.js
- ┃ ┃ ┗ 📜accordion.style.js
- ┃ ┣ 📂Basic
- ┃ ┃ ┣ 📜basic.js
- ┃ ┃ ┗ 📜basic.style.js
- ┃ ┣ 📂Choropleth
- ┃ ┃ ┣ 📜choropleth.js
- ┃ ┃ ┣ 📜choropleth.style.js
- ┃ ┃ ┗ 📜choropleth.test.js
- ┃ ┣ 📂Gradient
- ┃ ┃ ┣ 📜gradient.js
- ┃ ┃ ┗ 📜gradient.style.js
- ┃ ┣ 📂Heading
- ┃ ┃ ┣ 📜heading.js
- ┃ ┃ ┗ 📜heading.style.js
- ┃ ┣ 📂Modal
- ┃ ┃ ┣ 📜modal.js
- ┃ ┃ ┗ 📜modal.style.js
- ┃ ┣ 📂Slider
- ┃ ┃ ┣ 📜slider.js
- ┃ ┃ ┗ 📜slider.style.js
- ┃ ┣ 📂Timeline
- ┃ ┃ ┣ 📜timeline.js
- ┃ ┃ ┗ 📜timeline.style.js
- ┃ ┣ 📂Toolbar
- ┃ ┃ ┣ 📜toolbar.constants.js
- ┃ ┃ ┣ 📜toolbar.js
- ┃ ┃ ┣ 📜toolbar.style.js
- ┃ ┃ ┗ 📜toolbar.test.js
- ┃ ┗ 📂Tooltip
- ┃ ┃ ┣ 📜tooltip.js
- ┃ ┃ ┗ 📜tooltip.style.js
- ┣ 📂config
- ┃ ┗ 📂router
- ┃ ┃ ┗ 📜paths.js
- ┣ 📂fonts
- ┃ ┣ 📜Lato-Regular.woff
- ┃ ┗ 📜OpenSans-Regular.woff
- ┣ 📂screens
- ┃ ┗ 📂Home
- ┃ ┃ ┣ 📜home.constants.js
- ┃ ┃ ┣ 📜home.js
- ┃ ┃ ┗ 📜home.style.js
- ┣ 📂styles
- ┃ ┣ 📜global.js
- ┃ ┣ 📜mediaqueries.js
- ┃ ┗ 📜theme.js
- ┣ 📜App.js
- ┣ 📜index.css
- ┣ 📜index.js
- ┗ 📜setupTests.js
+
+**src**
+* [api/](./src/api)
+  * [api.js](./src/api/api.js)
+* [assets/](./src/assets)
+  * [icons/](./src/assets/icons)
+    * [arrow-down.svg](./src/assets/icons/arrow-down.svg)
+    * [cross.svg](./src/assets/icons/cross.svg)
+    * [drag-dots.svg](./src/assets/icons/drag-dots.svg)
+    * [hide.svg](./src/assets/icons/hide.svg)
+    * [info.svg](./src/assets/icons/info.svg)
+    * [show.svg](./src/assets/icons/show.svg)
+* [components/](./src/components)
+  * [Accordion/](./src/components/Accordion)
+    * [accordion.js](./src/components/Accordion/accordion.js)
+    * [accordion.style.js](./src/components/Accordion/accordion.style.js)
+  * [Basic/](./src/components/Basic)
+    * [basic.js](./src/components/Basic/basic.js)
+    * [basic.style.js](./src/components/Basic/basic.style.js)
+  * [Choropleth/](./src/components/Choropleth)
+    * [choropleth.js](./src/components/Choropleth/choropleth.js)
+    * [choropleth.style.js](./src/components/Choropleth/choropleth.style.js)
+    * [choropleth.test.js](./src/components/Choropleth/choropleth.test.js)
+  * [Gradient/](./src/components/Gradient)
+    * [gradient.js](./src/components/Gradient/gradient.js)
+    * [gradient.style.js](./src/components/Gradient/gradient.style.js)
+  * [Heading/](./src/components/Heading)
+    * [heading.js](./src/components/Heading/heading.js)
+    * [heading.style.js](./src/components/Heading/heading.style.js)
+  * [Modal/](./src/components/Modal)
+    * [modal.js](./src/components/Modal/modal.js)
+    * [modal.style.js](./src/components/Modal/modal.style.js)
+  * [Slider/](./src/components/Slider)
+    * [slider.js](./src/components/Slider/slider.js)
+    * [slider.style.js](./src/components/Slider/slider.style.js)
+  * [Timeline/](./src/components/Timeline)
+    * [timeline.js](./src/components/Timeline/timeline.js)
+    * [timeline.style.js](./src/components/Timeline/timeline.style.js)
+  * [Toolbar/](./src/components/Toolbar)
+    * [toolbar.constants.js](./src/components/Toolbar/toolbar.constants.js)
+    * [toolbar.js](./src/components/Toolbar/toolbar.js)
+    * [toolbar.style.js](./src/components/Toolbar/toolbar.style.js)
+    * [toolbar.test.js](./src/components/Toolbar/toolbar.test.js)
+  * [Tooltip/](./src/components/Tooltip)
+    * [tooltip.js](./src/components/Tooltip/tooltip.js)
+    * [tooltip.style.js](./src/components/Tooltip/tooltip.style.js)
+* [config/](./src/config)
+  * [router/](./src/config/router)
+    * [paths.js](./src/config/router/paths.js)
+* [fonts/](./src/fonts)
+  * [Lato-Regular.woff](./src/fonts/Lato-Regular.woff)
+  * [OpenSans-Regular.woff](./src/fonts/OpenSans-Regular.woff)
+* [screens/](./src/screens)
+  * [Home/](./src/screens/Home)
+    * [home.constants.js](./src/screens/Home/home.constants.js)
+    * [home.js](./src/screens/Home/home.js)
+    * [home.style.js](./src/screens/Home/home.style.js)
+* [styles/](./src/styles)
+  * [global.js](./src/styles/global.js)
+  * [mediaqueries.js](./src/styles/mediaqueries.js)
+  * [theme.js](./src/styles/theme.js)
+* [App.js](./src/App.js)
+* [index.css](./src/index.css)
+* [index.js](./src/index.js)
