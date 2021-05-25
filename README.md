@@ -11,8 +11,10 @@
 * To run component tests run `yarn test` on the project root.
 * To run end2end tests run `yarn run cypress open` on the project root. Ensured that the baseUrl configured in the **`cypress.json`** matches the url of your local
 
-## Demo
+## Demo 
 
+The project can be seen in the following url hosted on GitHub Page:
+https://anamontiaga.github.io/front-end-code-challenge
 
 ## Libraries/Tools used
 
