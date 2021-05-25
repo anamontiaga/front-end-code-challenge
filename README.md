@@ -29,6 +29,11 @@
 
 ## Requirements
 
+* **Create 3 different legend item components** Create, on the one hand, the **`Accordion`** component, which in turn contains the **`Toolbar`** component. These accordions are rendered on the **`Home`** screen with four types of component content: **`Basic`**, **`Choropleth`**, **`Gradient`**, and **`Timeline`** components.
+* **Create the toolbar component which contains 3 different buttons, each of them has a tooltip with a short name** Toolbar component created with the buttons that activate `onChangeVisibility` (to show / hide the content), `onChangeInfo` (to show a modal with the description) and `onChangeCollapse` (to expand / close the collapsible). A **`Tooltip`** component has also been created to display messages and a **`Modal`** component too to display description.
+* **Take care of mobile devices** A demo on a mobile device can be seen in the video below.
+* **Work closely with the design, try to implement it as accurately as possible**  The Figma designs and the established measures have been taken into account for a development that is as similar as possible.
+
 ## Optional goals
 
 1. **Text inside first layer**. Comes as two props, a named title with a fact-check title ready for future action, and another called text to place text inside.
