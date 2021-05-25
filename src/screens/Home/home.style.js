@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { isTablet } from 'styles/mediaqueries';
 import { Color, Font } from 'styles/theme';
 
 export const Body = styled.p`
@@ -19,14 +20,17 @@ export const Legend = styled.main`
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 80px;
+  top: 40px;
+  ${isTablet} {
+    top: 80px;
+  }
 `;
 
 export const View = styled.body`
   align-items: center;
   background: ${Color.background};
   display: flex;  
-  height: 900px;
+  height: 700px;
   justify-content: center;
   width: 100vw;
 `;

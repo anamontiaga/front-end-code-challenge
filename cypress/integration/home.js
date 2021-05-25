@@ -10,11 +10,14 @@ describe('First test', () => {
     cy.wait(2000)
     cy.get('<p>Two faith deadshot al!')
     cy.get('[data-cy=close-modal-btn]').click()
+    cy.wait(4000)
+    cy.get('[data-cy=collapse-btn]').last().click()
     cy.wait(2000)
-    cy.get('[data-cy=visibility-btn]').eq(2).click()
+    cy.get('[data-cy=slider-range]')
+      .invoke('val', 20001)
+      .trigger('change')
     cy.wait(4000)
-    cy.get('[data-cy=collapse-btn]').eq(2).click()
-    cy.wait(4000)
+
   });
 });
 

@@ -30,6 +30,7 @@ export const Slider = ({
             style={style}
           >
             <S.SliderBar
+              data-cy="slider-range"
               ref={props.ref}
               style={{
                 background: getTrackBackground({
