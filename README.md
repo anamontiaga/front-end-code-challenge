@@ -48,7 +48,9 @@ https://anamontiaga.github.io/front-end-code-challenge
 3. **Timeline section**. I first tried to make a double thumb slider component manually, but eventually it didn't fit very well, so I looked into npm trends for a popular, documented and maintained component over time, and decided to use react-range. It allows to establish initial values and obtain the data of the chosen range. It is possible to capture both startData and endData values through lengendDates state which is in the HOME.
 
 ## Mobile devices
-https://user-images.githubusercontent.com/51995866/119395145-65faf900-bcd3-11eb-9b39-196c43134b67.mov
+
+https://user-images.githubusercontent.com/51995866/119614584-bc188b00-bdfe-11eb-997e-911dc3593086.mov
+
 
 ## Structure
 
