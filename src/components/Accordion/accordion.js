@@ -49,8 +49,8 @@ export const Accordion = ({
       </S.Header>
       {isAccordionOpen && (
         <animated.div style={openAccordionAnimation}>
-          <S.Content>
-            {isLayerVisible && children}
+          <S.Content isLayerVisible={isLayerVisible}>
+            {children}
           </S.Content>
         </animated.div>
       )}

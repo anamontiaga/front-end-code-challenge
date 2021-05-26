@@ -23,6 +23,9 @@ export const Content = styled.div`
   background: ${Color.primary};
   border: 1px solid transparent;
   padding: 0 ${Spacing.s};
+  ${(props) => !props.isLayerVisible && `
+    visibility: hidden;
+  `}
 `;
 
 export const DragButton = styled.button`
