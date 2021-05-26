@@ -17,7 +17,8 @@ export const Home = () => {
 
   useEffect(() => {
     fetchData()
-      .then((data) => setLegendData(data.map((obj, i) => ({ ...obj, order: i + 1 }))));
+      .then((data) => setLegendData(data.map((obj, i) => ({ ...obj, order: i + 1 }))))
+      .catch((error) => console.log(error));
   }, []);
 
   const handleDrag = (ev) => {
